@@ -1,0 +1,10 @@
+[
+  {
+    "Code": "H0080",
+    "Message": "Sentinel LDK Protection System (Unknown Error)",
+    "Solutions": [
+      "Checking physical license key connection",
+      "Checking Sentinel LDK License Manager service"
+    ]
+  }
+]
