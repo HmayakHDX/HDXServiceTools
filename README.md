@@ -9,7 +9,7 @@ This proof-of-concept demonstrates how internal tooling can reduce technician de
 
 - **Stage:** Proof of Concept  
 - **Deployment:** Single executable (packaging may evolve)  
-- **Audience:** External IT teams, clinic staff, internal development team  
+- **Audience:** External IT teams, clinic staff, internal engineering team  
 
 ## Features
 
