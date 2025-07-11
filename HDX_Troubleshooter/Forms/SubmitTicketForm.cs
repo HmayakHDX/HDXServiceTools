@@ -45,11 +45,12 @@ namespace HDX_ServiceTools.Forms
 
 
             // Required field check
+            // TODO: Is dentist name required?
             if (string.IsNullOrWhiteSpace(clinic) || string.IsNullOrWhiteSpace(dentist) ||
                 string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(issue))
             {
                 UserPrompts.PromptWithInfo("Please fill out all required fields.");
-                
+
                 btnSubmit.Enabled = true;
                 return;
             }

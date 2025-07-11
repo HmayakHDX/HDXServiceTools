@@ -6,5 +6,26 @@
       "Checking physical license key connection",
       "Checking Sentinel LDK License Manager service"
     ]
+  },
+  {
+    "Code": "H0007",
+    "Message": "Sentinel Key Not Found",
+    "Solutions": [
+      "Checking network connectivity to server"
+    ]
+  },
+  {
+    "Code": "ERR-113",
+    "Message": "Images Loading Failed",
+    "Solutions": [
+      "Checking connectivity to shared DICOM folder"
+    ]
+  },
+  {
+    "Code": "ERR-108",
+    "Message": "Database Connection Does Not Working",
+    "Solutions": [
+      "Verify database configuration for Will-Master"
+    ]
   }
 ]

@@ -1,4 +1,7 @@
-﻿using HDX_ServiceTools.Core;
+﻿// TODO: Implement automated SubmitTicketForm if installation fails
+// Remember to handle non-critical exceptions accordingly (e.g., already installed, newer version installed, etc.)
+
+using HDX_ServiceTools.Core;
 using HDX_ServiceTools.Helpers;
 using HDX_ServiceTools.InstallHandlers;
 
@@ -84,7 +87,7 @@ namespace HDX_ServiceTools.Forms
         {
             MessageBox.Show(
                 "Please use Will-Master + OnDemand3D option for proof of concept.",
-                "To Be Developed",
+                "TBD",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
@@ -95,7 +98,7 @@ namespace HDX_ServiceTools.Forms
         {
             MessageBox.Show(
                 "Please use Will-Master + OnDemand3D option for proof of concept.",
-                "To Be Developed",
+                "TBD",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
@@ -106,7 +109,29 @@ namespace HDX_ServiceTools.Forms
         {
             MessageBox.Show(
                 "Please use Will-Master + OnDemand3D option for proof of concept.",
-                "To Be Developed",
+                "TBD",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        // TODO: Implementation will be similar to StandardInstallButton_Click
+        private void BtnDentra_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Please use Will-Master + OnDemand3D option for proof of concept.",
+                "TBD",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        // TODO: Implementation will be similar to StandardInstallButton_Click
+        private void BtnIray_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Please use Will-Master + OnDemand3D option for proof of concept.",
+                "TBD",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
@@ -134,6 +159,8 @@ namespace HDX_ServiceTools.Forms
             wmInstallButton.Visible = true;
             odInstallButton.Visible = true;
             willcephInstallButton.Visible = true;
+            btnIray.Visible = true;
+            btnDentra.Visible = true;
 
             descriptionLabel.Visible = false;
             progressBar.Visible = false;
@@ -151,6 +178,8 @@ namespace HDX_ServiceTools.Forms
             wmInstallButton.Visible = false;
             odInstallButton.Visible = false;
             willcephInstallButton.Visible = false;
+            btnIray.Visible = false;
+            btnDentra.Visible = false;
 
             descriptionLabel.Visible = true;
             progressBar.Visible = true;

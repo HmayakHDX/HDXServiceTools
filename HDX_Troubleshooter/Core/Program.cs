@@ -1,3 +1,5 @@
+// TODO: Update method names for consistency (and variable/UI control names too)
+
 using HDX_ServiceTools.Forms;
 using System.Diagnostics;
 using System.Security.Principal;

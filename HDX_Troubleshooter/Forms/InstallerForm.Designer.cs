@@ -43,6 +43,8 @@
             willcephInstallButton = new Button();
             finishButton = new Button();
             btnHelp = new Button();
+            btnIray = new Button();
+            btnDentra = new Button();
             ((System.ComponentModel.ISupportInitialize)Logo).BeginInit();
             SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             homeButton.Margin = new Padding(2, 3, 2, 3);
             homeButton.Name = "homeButton";
             homeButton.Size = new Size(69, 33);
-            homeButton.TabIndex = 14;
+            homeButton.TabIndex = 2;
             homeButton.Text = "Home";
             homeButton.UseVisualStyleBackColor = true;
             homeButton.Click += HomeButton_Click;
@@ -65,8 +67,8 @@
             supportLabel.AutoSize = true;
             supportLabel.BackColor = Color.Transparent;
             supportLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            supportLabel.Location = new Point(198, 446);
-            supportLabel.Margin = new Padding(2, 10, 2, 0);
+            supportLabel.Location = new Point(189, 448);
+            supportLabel.Margin = new Padding(180, 10, 180, 0);
             supportLabel.Name = "supportLabel";
             supportLabel.Size = new Size(335, 30);
             supportLabel.TabIndex = 15;
@@ -88,8 +90,8 @@
             optionsLabel.AutoSize = true;
             optionsLabel.BackColor = Color.Transparent;
             optionsLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            optionsLabel.Location = new Point(190, 98);
-            optionsLabel.Margin = new Padding(2, 10, 2, 10);
+            optionsLabel.Location = new Point(160, 99);
+            optionsLabel.Margin = new Padding(151, 10, 151, 10);
             optionsLabel.Name = "optionsLabel";
             optionsLabel.Size = new Size(394, 21);
             optionsLabel.TabIndex = 17;
@@ -100,11 +102,11 @@
             // 
             standardInstallButton.AutoSize = true;
             standardInstallButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            standardInstallButton.Location = new Point(190, 142);
-            standardInstallButton.Margin = new Padding(9, 10, 2, 3);
+            standardInstallButton.Location = new Point(194, 140);
+            standardInstallButton.Margin = new Padding(185, 10, 2, 3);
             standardInstallButton.Name = "standardInstallButton";
             standardInstallButton.Size = new Size(148, 55);
-            standardInstallButton.TabIndex = 18;
+            standardInstallButton.TabIndex = 3;
             standardInstallButton.Text = "Will-Master +\n OnDemand3D";
             standardInstallButton.UseVisualStyleBackColor = true;
             standardInstallButton.Click += StandardInstallButton_Click;
@@ -113,8 +115,8 @@
             // 
             descriptionLabel.AutoSize = true;
             descriptionLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            descriptionLabel.Location = new Point(198, 98);
-            descriptionLabel.Margin = new Padding(2, 0, 2, 0);
+            descriptionLabel.Location = new Point(176, 99);
+            descriptionLabel.Margin = new Padding(166, 0, 166, 0);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(362, 21);
             descriptionLabel.TabIndex = 19;
@@ -124,34 +126,35 @@
             // progressBar
             // 
             progressBar.BackColor = SystemColors.Control;
-            progressBar.Location = new Point(126, 365);
-            progressBar.Margin = new Padding(2, 3, 2, 3);
+            progressBar.Location = new Point(59, 365);
+            progressBar.Margin = new Padding(100, 3, 100, 3);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(474, 25);
+            progressBar.Size = new Size(595, 25);
             progressBar.TabIndex = 20;
             progressBar.Visible = false;
             // 
             // statusText
             // 
             statusText.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            statusText.Location = new Point(126, 134);
-            statusText.Margin = new Padding(2, 3, 2, 3);
+            statusText.Location = new Point(59, 133);
+            statusText.Margin = new Padding(50, 3, 50, 3);
             statusText.Multiline = true;
             statusText.Name = "statusText";
             statusText.ReadOnly = true;
             statusText.ScrollBars = ScrollBars.Vertical;
-            statusText.Size = new Size(474, 224);
+            statusText.Size = new Size(595, 224);
             statusText.TabIndex = 21;
+            statusText.TabStop = false;
             statusText.Visible = false;
             // 
             // backButton
             // 
             backButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backButton.Location = new Point(243, 401);
-            backButton.Margin = new Padding(2, 3, 2, 3);
+            backButton.Location = new Point(232, 402);
+            backButton.Margin = new Padding(275, 3, 2, 3);
             backButton.Name = "backButton";
             backButton.Size = new Size(69, 31);
-            backButton.TabIndex = 22;
+            backButton.TabIndex = 9;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
             backButton.Visible = false;
@@ -160,11 +163,11 @@
             // continueButton
             // 
             continueButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            continueButton.Location = new Point(369, 401);
-            continueButton.Margin = new Padding(2, 3, 2, 3);
+            continueButton.Location = new Point(402, 402);
+            continueButton.Margin = new Padding(2, 3, 275, 3);
             continueButton.Name = "continueButton";
             continueButton.Size = new Size(102, 31);
-            continueButton.TabIndex = 23;
+            continueButton.TabIndex = 10;
             continueButton.Text = "Continue";
             continueButton.UseVisualStyleBackColor = true;
             continueButton.Visible = false;
@@ -174,11 +177,11 @@
             // 
             wmInstallButton.AutoSize = true;
             wmInstallButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            wmInstallButton.Location = new Point(402, 142);
-            wmInstallButton.Margin = new Padding(9, 10, 2, 10);
+            wmInstallButton.Location = new Point(371, 140);
+            wmInstallButton.Margin = new Padding(9, 10, 185, 10);
             wmInstallButton.Name = "wmInstallButton";
             wmInstallButton.Size = new Size(148, 55);
-            wmInstallButton.TabIndex = 24;
+            wmInstallButton.TabIndex = 4;
             wmInstallButton.Text = "Will-Master";
             wmInstallButton.UseVisualStyleBackColor = true;
             wmInstallButton.Click += WmInstallButton_Click;
@@ -187,11 +190,11 @@
             // 
             odInstallButton.AutoSize = true;
             odInstallButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            odInstallButton.Location = new Point(402, 218);
-            odInstallButton.Margin = new Padding(9, 10, 2, 3);
+            odInstallButton.Location = new Point(371, 208);
+            odInstallButton.Margin = new Padding(9, 10, 2, 10);
             odInstallButton.Name = "odInstallButton";
             odInstallButton.Size = new Size(148, 55);
-            odInstallButton.TabIndex = 25;
+            odInstallButton.TabIndex = 6;
             odInstallButton.Text = "OnDemand3D";
             odInstallButton.UseVisualStyleBackColor = true;
             odInstallButton.Click += OdInstallButton_Click;
@@ -200,11 +203,11 @@
             // 
             willcephInstallButton.AutoSize = true;
             willcephInstallButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            willcephInstallButton.Location = new Point(190, 218);
+            willcephInstallButton.Location = new Point(194, 208);
             willcephInstallButton.Margin = new Padding(9, 10, 2, 3);
             willcephInstallButton.Name = "willcephInstallButton";
             willcephInstallButton.Size = new Size(148, 55);
-            willcephInstallButton.TabIndex = 26;
+            willcephInstallButton.TabIndex = 5;
             willcephInstallButton.Text = "Will-Ceph";
             willcephInstallButton.UseVisualStyleBackColor = true;
             willcephInstallButton.Click += WillcephInstallButton_Click;
@@ -212,11 +215,11 @@
             // finishButton
             // 
             finishButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            finishButton.Location = new Point(530, 401);
-            finishButton.Margin = new Padding(2, 3, 2, 3);
+            finishButton.Location = new Point(322, 402);
+            finishButton.Margin = new Padding(313, 3, 313, 3);
             finishButton.Name = "finishButton";
             finishButton.Size = new Size(69, 31);
-            finishButton.TabIndex = 27;
+            finishButton.TabIndex = 11;
             finishButton.Text = "Finish";
             finishButton.UseVisualStyleBackColor = true;
             finishButton.Visible = false;
@@ -230,10 +233,36 @@
             btnHelp.Margin = new Padding(2, 3, 2, 3);
             btnHelp.Name = "btnHelp";
             btnHelp.Size = new Size(69, 33);
-            btnHelp.TabIndex = 28;
+            btnHelp.TabIndex = 1;
             btnHelp.Text = "Help";
             btnHelp.UseVisualStyleBackColor = true;
             btnHelp.Click += BtnHelp_Click;
+            // 
+            // btnIray
+            // 
+            btnIray.AutoSize = true;
+            btnIray.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnIray.Location = new Point(371, 276);
+            btnIray.Margin = new Padding(9, 10, 2, 3);
+            btnIray.Name = "btnIray";
+            btnIray.Size = new Size(148, 55);
+            btnIray.TabIndex = 8;
+            btnIray.Text = "iRay Sensor";
+            btnIray.UseVisualStyleBackColor = true;
+            btnIray.Click += BtnIray_Click;
+            // 
+            // btnDentra
+            // 
+            btnDentra.AutoSize = true;
+            btnDentra.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDentra.Location = new Point(194, 276);
+            btnDentra.Margin = new Padding(9, 10, 2, 3);
+            btnDentra.Name = "btnDentra";
+            btnDentra.Size = new Size(148, 55);
+            btnDentra.TabIndex = 7;
+            btnDentra.Text = "Dentra3 Sensor";
+            btnDentra.UseVisualStyleBackColor = true;
+            btnDentra.Click += BtnDentra_Click;
             // 
             // InstallerForm
             // 
@@ -241,6 +270,8 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.LightGray;
             ClientSize = new Size(713, 487);
+            Controls.Add(btnDentra);
+            Controls.Add(btnIray);
             Controls.Add(btnHelp);
             Controls.Add(finishButton);
             Controls.Add(willcephInstallButton);
@@ -284,5 +315,7 @@
         private Button willcephInstallButton;
         private Button finishButton;
         private Button btnHelp;
+        private Button btnIray;
+        private Button btnDentra;
     }
 }

@@ -23,15 +23,16 @@ namespace HDX_ServiceTools.Forms
         }
 
         // TODO: Similar to workstation troubleshooting, but different set of errors (dictionary change)
-        private void TroubleshootWorkstationButton_Click(object sender, EventArgs e)
+        // Hidden for now for proof of concept (maybe just keep one button?)
+       /* private void TroubleshootWorkstationButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
                 "Please use Troubleshoot (Server) option for proof of concept.",
-                "To Be Developed",
+                "TBD",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
-        }
+        }*/
 
         // TODO: Requires involvement from Korean R&D for acquisition/automated measurements (if even possible)
         private void QualityAssuranceButton_Click(object sender, EventArgs e)
@@ -39,8 +40,8 @@ namespace HDX_ServiceTools.Forms
             MessageBox.Show(
                 "Need to consult with Korea if possible to implement.\n\n" +
                 "Concept is to implement established QA/QC guide programatically and automate any parts possible.\n\n" +
-                "Guide user to set up phantom, acquisition, .raw loading in Will-DVTViewer, performing NYQ, CNR, HOM, MTF measurements (and Water/Air?)",
-                "To Be Developed",
+                "For example: Guide user to set up phantom, acquisition, .raw loading in Will-DVTViewer, performing NYQ, CNR, HOM, MTF measurements (and Water/Air?)",
+                "TBD",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );

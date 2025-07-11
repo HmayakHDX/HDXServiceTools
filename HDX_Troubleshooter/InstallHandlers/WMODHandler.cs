@@ -46,7 +46,7 @@ namespace HDX_ServiceTools.InstallHandlers
 
                 Logger.LogAndUpdate("Installation has been completed.", updateStatus);
             }
-            catch (OperationCanceledException ex)
+            catch (OperationCanceledException)
             {
                 // Catches cancellation via CancellationToken — e.g., user clicked cancel
                 Logger.LogAndUpdate("Installation cancelled by user.", updateStatus);
