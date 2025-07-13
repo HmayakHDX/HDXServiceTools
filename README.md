@@ -88,7 +88,7 @@ HDX_ServiceTools/
 │
 ├── Models/                 # Data models
 │   └── ErrorInfo.cs
-│   └── InstalltionInfo.cs
+│   └── InstallationInfo.cs
 │
 ├── Resources/              # Embedded assets
 │   └── Logo.png
