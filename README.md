@@ -93,7 +93,7 @@ HDX_ServiceTools/
 ├── Resources/              # Embedded assets
 │   └── Logo.png
 │   └── knownErrors.json    # JSON-configured error mapping
-│	└── installOptions.json    # JSON-configured installation mapping
+│	  └── installOptions.json # JSON-configured installation mapping
 ```
 
 ## Roadmap
