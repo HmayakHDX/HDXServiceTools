@@ -2,6 +2,6 @@
 {
     public interface IErrorHandler
     {
-        void Handle(Action<string> updateStatus);
+        bool Handle(Action<string> updateStatus);
     }
 }

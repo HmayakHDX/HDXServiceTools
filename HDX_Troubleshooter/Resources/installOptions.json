@@ -1,0 +1,33 @@
+[
+  {
+    "Option": "Will-Master & OnDemand3D",
+    "Description": [
+      "Will-Master (Patient Database and 2D Viewer)",
+      "OnDemand3D (3D Viewer)",
+      "Runtime dependencies",
+      "Associated drivers"
+    ]
+  },
+  {
+    "Option": "Will-Master",
+    "Description": [
+      "Will-Master (Patient Database and 2D Viewer)",
+      "Runtime dependencies"
+    ]
+  },
+  {
+    "Option": "OnDemand3D",
+    "Description": [
+      "OnDemand3D (3D Viewer)",
+      "Runtime dependencies",
+      "Associated drivers"
+    ]
+  },
+  {
+    "Option": "Dentra3 Intra-Oral Sensor",
+    "Description": [
+      "Sensor drivers",
+      "TWAIN drivers"
+    ]
+  }
+]

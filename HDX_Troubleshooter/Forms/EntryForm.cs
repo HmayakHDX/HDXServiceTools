@@ -12,30 +12,18 @@ namespace HDX_ServiceTools.Forms
             AutoScaleMode = AutoScaleMode.Dpi;
         }
 
-        private void InstallButton_Click(object sender, EventArgs e)
+        private void BtnInstall_Click(object sender, EventArgs e)
         {
             FormManager.ShowInstallerForm();
         }
 
-        private void TroubleshootButton_Click(object sender, EventArgs e)
+        private void BtnTroubleshoot_Click(object sender, EventArgs e)
         {
             FormManager.ShowTroubleshooterForm();
         }
 
-        // TODO: Similar to workstation troubleshooting, but different set of errors (dictionary change)
-        // Hidden for now for proof of concept (maybe just keep one button?)
-       /* private void TroubleshootWorkstationButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "Please use Troubleshoot (Server) option for proof of concept.",
-                "TBD",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-        }*/
-
         // TODO: Requires involvement from Korean R&D for acquisition/automated measurements (if even possible)
-        private void QualityAssuranceButton_Click(object sender, EventArgs e)
+        private void BtnQA_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
                 "Need to consult with Korea if possible to implement.\n\n" +

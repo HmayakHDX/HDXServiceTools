@@ -4,6 +4,8 @@ namespace HDX_ServiceTools.Helpers
 {
     public static class ServiceUtils
     {
+        // TODO: Implement logic to check dongle through Sentinel API & system resources (if possible)
+        // ---> to avoid user prompts and make it more automated (prompt for dongle if checks fail)
         public static bool TryVerifyDongle(Action<string> updateStatus)
         {
             Logger.LogAndUpdate("Checking if license key is connected and enabled...", updateStatus);
@@ -29,7 +31,6 @@ namespace HDX_ServiceTools.Helpers
                 if (result == DialogResult.Yes)
                 {
                     Logger.LogAndUpdate("License key reported as ENABLED.", updateStatus);
-                    // TODO: Implement method to check dongle through Sentinel API (if possible)
                     return true;
                 }
 
@@ -73,7 +74,6 @@ namespace HDX_ServiceTools.Helpers
                 return false;
             }
         }
-
 
         private static bool LogUnexpectedState(ServiceController sc, Action<string> updateStatus)
         {

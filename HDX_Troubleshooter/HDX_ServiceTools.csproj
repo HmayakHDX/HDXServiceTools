@@ -19,11 +19,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\installOptions.json" />
     <None Remove="Resources\knownErrors.json" />
     <None Remove="Resources\Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\installOptions.json" />
     <EmbeddedResource Include="Resources\knownErrors.json" />
     <EmbeddedResource Include="Resources\Logo.png" />
   </ItemGroup>

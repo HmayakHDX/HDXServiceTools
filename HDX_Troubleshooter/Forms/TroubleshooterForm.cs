@@ -4,6 +4,7 @@ using HDX_ServiceTools.Models;
 using HDX_ServiceTools.TroubleshootHandlers;
 using HDX_ServiceTools.Helpers;
 using HDX_ServiceTools.Core;
+using HDX_ServiceTools.Properties;
 
 namespace HDX_ServiceTools.Forms
 {
@@ -13,6 +14,7 @@ namespace HDX_ServiceTools.Forms
         private ErrorInfo? _selectedInfo = null;
         private string _selectedError = string.Empty;
         private string _selectedCode = string.Empty;
+        private bool _success;
 
         // TODO: Update JSON & implement additional error handlers accordingly
         private static readonly Dictionary<string, IErrorHandler> errorHandlers = new()
@@ -23,13 +25,13 @@ namespace HDX_ServiceTools.Forms
         public TroubleshooterForm()
         {
             InitializeComponent();
-            Logo.Image = Properties.Resources.Logo;
+            Logo.Image = Resources.Logo;
             Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             AutoScaleMode = AutoScaleMode.Dpi;
 
             try
             {
-                _knownErrors = InterfaceUtils.LoadFromJSON();
+                _knownErrors = InterfaceUtils.LoadFromJSON<ErrorInfo>(Resources.knownErrors);
             }
             catch (Exception ex)
             {
@@ -40,40 +42,39 @@ namespace HDX_ServiceTools.Forms
                 );
 
                 Logger.Write($"The application encountered a critical error while loading known errors: {ex.Message}");
-
                 Close();
             }
         }
 
         // Event handler that runs whenever the text in txtSearch changes
-        private void SearchText_TextChanged(object sender, EventArgs e)
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
             // Create list of ErrorInfo objects, based on user's input
-            List<ErrorInfo> matches = InterfaceUtils.Filter(_knownErrors, searchText.Text);
+            List<ErrorInfo> matches = InterfaceUtils.Filter(_knownErrors, txtSearch.Text);
 
             // Clear the ListBox before updating it with new filtered results
-            errorList.Items.Clear();
+            lstError.Items.Clear();
 
             // Add matches to the ListBox, or show fallback message if none found
             if (matches.Count > 0)
             {
                 foreach (ErrorInfo error in matches)
-                    errorList.Items.Add($"{error.Code}: {error.Message}");
+                    lstError.Items.Add($"{error.Code}: {error.Message}");
             }
             else
-                errorList.Items.Add("No matching issues found.");
+                lstError.Items.Add("No matching issues found.");
         }
 
-        private void ErrorList_DoubleClick(object sender, EventArgs e)
+        private void BtnNext_Click(object sender, EventArgs e)
         {
-            if (errorList.SelectedItem != null && (string)errorList.SelectedItem != "No matching issues found.")
+            if (lstError.SelectedItem != null && (string)lstError.SelectedItem != "No matching issues found.")
             {
                 Stage2();
 
-                _selectedError = errorList.SelectedItem.ToString()!;
+                _selectedError = lstError.SelectedItem.ToString()!;
                 Logger.Write($"User selected {_selectedError}");
 
-                errorLabel.Text = $"\"{_selectedError}\" can be addressed by:";
+                lblDescription.Text = $"\"{_selectedError}\" can be addressed by:";
 
                 _selectedCode = InterfaceUtils.ExtractErrorCode(_selectedError);
                 _selectedInfo = InterfaceUtils.FindByCode(_knownErrors, _selectedCode);
@@ -81,62 +82,77 @@ namespace HDX_ServiceTools.Forms
                 if (_selectedInfo != null)
                 {
                     foreach (string solution in _selectedInfo.Solutions)
-                        statusText.AppendText($"~ {solution}" + Environment.NewLine);
-                    statusText.AppendText(Environment.NewLine);
+                        txtStatus.AppendText($"~ {solution}" + Environment.NewLine);
+                    txtStatus.AppendText(Environment.NewLine);
                 }
             }
         }
 
         // TODO: Make methods asynchronous to avoid blocking the UI thread or allow user to cancel long-running operations?
-        private void ContinueButton_Click(object sender, EventArgs e)
+        private void BtnContinue_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(_selectedInfo?.Code) &&
                 errorHandlers.TryGetValue(_selectedInfo.Code, out var handler))
             {
+                // Assign bool _success to handler's output
                 // Pass lambda to the handler that updates the statusText TextBox
-                handler.Handle(message =>
+                _success = handler.Handle(message =>
                 {
-                    statusText.AppendText($"{DateTime.Now:HH:mm:ss} - {message}{Environment.NewLine}");
+                    txtStatus.AppendText($"{DateTime.Now:HH:mm:ss} - {message}{Environment.NewLine}");
                 });
+
+                if (_success)
+                {
+                    UserPrompts.PromptWithInfo("Troubleshooting was successful");
+                    Close();
+                }
+                else
+                {
+                    UserPrompts.PromptToContactSupport();
+                    Close();
+                    FormManager.ShowSubmitTicketForm();
+                }
             }
             else
                 MessageBox.Show("No defined action for this error code.");
         }
 
-        private void HomeButton_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             FormManager.ReturnToEntryForm(this);
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             Stage1();
         }
 
         private void Stage1()
         {
-            enterLabel.Visible = true;
-            searchText.Visible = true;
-            errorList.Visible = true;
+            lblInstructions.Visible = true;
+            txtSearch.Visible = true;
+            lstError.Visible = true;
+            btnNext.Visible = true;
 
-            errorLabel.Visible = false;
-            statusText.Visible = false;
-            backButton.Visible = false;
-            continueButton.Visible = false;
+            lblDescription.Visible = false;
+            txtStatus.Visible = false;
+            btnBack.Visible = false;
+            btnContinue.Visible = false;
 
-            statusText.Clear();
+            txtStatus.Clear();
         }
 
         private void Stage2()
         {
-            enterLabel.Visible = false;
-            searchText.Visible = false;
-            errorList.Visible = false;
+            lblInstructions.Visible = false;
+            txtSearch.Visible = false;
+            lstError.Visible = false;
+            btnNext.Visible = false;
 
-            errorLabel.Visible = true;
-            statusText.Visible = true;
-            backButton.Visible = true;
-            continueButton.Visible = true;
+            lblDescription.Visible = true;
+            txtStatus.Visible = true;
+            btnBack.Visible = true;
+            btnContinue.Visible = true;
         }
 
         private void BtnHelp_Click(object sender, EventArgs e)

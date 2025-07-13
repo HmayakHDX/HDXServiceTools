@@ -1,11 +1,10 @@
 ﻿using HDX_ServiceTools.Helpers;
-using HDX_ServiceTools.Core;
 
 namespace HDX_ServiceTools.TroubleshootHandlers
 {
     public class H0080Handler : IErrorHandler
     {
-        public void Handle(Action<string> updateStatus)
+        public bool Handle(Action<string> updateStatus)
         {
             Logger.LogAndUpdate("Starting troubleshooting for error H0080...", updateStatus);
 
@@ -15,12 +14,10 @@ namespace HDX_ServiceTools.TroubleshootHandlers
 
                 if (UserPrompts.PromptToRetryAppAndContinue(
                     "Please reconnect the license key and try to open the Will-Master application again.\n\nIs the issue resolved?",
-                    "Reconnect USB",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Information))
+                    "Reconnect USB"))
                 {
                     Logger.LogAndUpdate("Reconnecting the license key resolved the issue.", updateStatus);
-                    return;
+                    return true;
                 }
             }
 
@@ -34,7 +31,7 @@ namespace HDX_ServiceTools.TroubleshootHandlers
             if (UserPrompts.PromptToRetryAppAndContinue())
             {
                 Logger.LogAndUpdate("Starting/Restarting the service resolved the issue.", updateStatus);
-                return;
+                return true;
             }
 
             // END DEMO
@@ -47,13 +44,12 @@ namespace HDX_ServiceTools.TroubleshootHandlers
                 if (UserPrompts.PromptToRetryAppAndContinue())
                 {
                     Logger.LogAndUpdate("Starting/Restarting the service resolved the issue.", updateStatus);
-                    return;
+                    return true;
                 }
             }*/
 
-            Logger.LogAndUpdate("Please contact HDX support.", updateStatus);
-            UserPrompts.PromptToContactSupport();
-            FormManager.ShowSubmitTicketForm();
+            Logger.Write("Application failed to resolve the issue. Redirected to SubmitTicketForm.");
+            return false;
         }
     }
 }

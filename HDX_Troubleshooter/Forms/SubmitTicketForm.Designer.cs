@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             Logo = new PictureBox();
-            supportLabel = new Label();
-            instructionsLabel = new Label();
-            txtClinicName = new TextBox();
-            clinicNamelabel = new Label();
-            dentistNamelabel = new Label();
-            txtDentistName = new TextBox();
-            emailContactLabel = new Label();
+            lblSupport = new Label();
+            lblInstructions = new Label();
+            txtClinic = new TextBox();
+            lblClinic = new Label();
+            lblDentist = new Label();
+            txtDentist = new TextBox();
+            lblEmail = new Label();
             txtEmail = new TextBox();
-            phoneContactLabel = new Label();
+            lblPhone = new Label();
             txtPhone = new TextBox();
-            descriptionLabel = new Label();
+            lblDescription = new Label();
             txtDescription = new TextBox();
             btnSubmit = new Button();
             btnCancel = new Button();
-            lblTVId = new Label();
-            txtTVId = new TextBox();
+            lblTVID = new Label();
+            txtTVID = new TextBox();
             lblTVPassword = new Label();
             txtTVPassword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)Logo).BeginInit();
@@ -60,89 +60,89 @@
             Logo.TabIndex = 8;
             Logo.TabStop = false;
             // 
-            // supportLabel
+            // lblSupport
             // 
-            supportLabel.Anchor = AnchorStyles.Bottom;
-            supportLabel.AutoSize = true;
-            supportLabel.BackColor = Color.Transparent;
-            supportLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            supportLabel.Location = new Point(189, 448);
-            supportLabel.Margin = new Padding(180, 10, 180, 0);
-            supportLabel.Name = "supportLabel";
-            supportLabel.Size = new Size(335, 30);
-            supportLabel.TabIndex = 9;
-            supportLabel.Text = "For any questions or concerns, please contact HDX support:\n888–850–8810 (Ext. 3) | support@hdxwillna.com";
-            supportLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblSupport.Anchor = AnchorStyles.Bottom;
+            lblSupport.AutoSize = true;
+            lblSupport.BackColor = Color.Transparent;
+            lblSupport.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSupport.Location = new Point(189, 448);
+            lblSupport.Margin = new Padding(180, 10, 180, 0);
+            lblSupport.Name = "lblSupport";
+            lblSupport.Size = new Size(335, 30);
+            lblSupport.TabIndex = 9;
+            lblSupport.Text = "For any questions or concerns, please contact HDX support:\n888–850–8810 (Ext. 3) | support@hdxwillna.com";
+            lblSupport.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // instructionsLabel
+            // lblInstructions
             // 
-            instructionsLabel.AutoSize = true;
-            instructionsLabel.BackColor = Color.Transparent;
-            instructionsLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            instructionsLabel.Location = new Point(184, 87);
-            instructionsLabel.Margin = new Padding(175, 10, 175, 10);
-            instructionsLabel.Name = "instructionsLabel";
-            instructionsLabel.Size = new Size(344, 21);
-            instructionsLabel.TabIndex = 10;
-            instructionsLabel.Text = "Please fill out all required fields and click Submit";
-            instructionsLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblInstructions.AutoSize = true;
+            lblInstructions.BackColor = Color.Transparent;
+            lblInstructions.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInstructions.Location = new Point(184, 87);
+            lblInstructions.Margin = new Padding(175, 10, 175, 10);
+            lblInstructions.Name = "lblInstructions";
+            lblInstructions.Size = new Size(344, 21);
+            lblInstructions.TabIndex = 10;
+            lblInstructions.Text = "Please fill out all required fields and click Submit";
+            lblInstructions.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtClinicName
+            // txtClinic
             // 
-            txtClinicName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtClinicName.Location = new Point(19, 150);
-            txtClinicName.Margin = new Padding(2, 3, 2, 5);
-            txtClinicName.Name = "txtClinicName";
-            txtClinicName.Size = new Size(379, 29);
-            txtClinicName.TabIndex = 12;
+            txtClinic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtClinic.Location = new Point(19, 150);
+            txtClinic.Margin = new Padding(2, 3, 2, 5);
+            txtClinic.Name = "txtClinic";
+            txtClinic.Size = new Size(379, 29);
+            txtClinic.TabIndex = 12;
             // 
-            // clinicNamelabel
+            // lblClinic
             // 
-            clinicNamelabel.AutoSize = true;
-            clinicNamelabel.BackColor = Color.Transparent;
-            clinicNamelabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            clinicNamelabel.Location = new Point(19, 123);
-            clinicNamelabel.Margin = new Padding(10, 10, 2, 3);
-            clinicNamelabel.Name = "clinicNamelabel";
-            clinicNamelabel.Size = new Size(101, 21);
-            clinicNamelabel.TabIndex = 16;
-            clinicNamelabel.Text = "Clinic Name*";
-            clinicNamelabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblClinic.AutoSize = true;
+            lblClinic.BackColor = Color.Transparent;
+            lblClinic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblClinic.Location = new Point(19, 123);
+            lblClinic.Margin = new Padding(10, 10, 2, 3);
+            lblClinic.Name = "lblClinic";
+            lblClinic.Size = new Size(101, 21);
+            lblClinic.TabIndex = 16;
+            lblClinic.Text = "Clinic Name*";
+            lblClinic.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dentistNamelabel
+            // lblDentist
             // 
-            dentistNamelabel.AutoSize = true;
-            dentistNamelabel.BackColor = Color.Transparent;
-            dentistNamelabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dentistNamelabel.Location = new Point(450, 123);
-            dentistNamelabel.Margin = new Padding(2, 5, 2, 10);
-            dentistNamelabel.Name = "dentistNamelabel";
-            dentistNamelabel.Size = new Size(110, 21);
-            dentistNamelabel.TabIndex = 17;
-            dentistNamelabel.Text = "Doctor Name*";
-            dentistNamelabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblDentist.AutoSize = true;
+            lblDentist.BackColor = Color.Transparent;
+            lblDentist.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDentist.Location = new Point(450, 123);
+            lblDentist.Margin = new Padding(2, 5, 2, 10);
+            lblDentist.Name = "lblDentist";
+            lblDentist.Size = new Size(110, 21);
+            lblDentist.TabIndex = 17;
+            lblDentist.Text = "Doctor Name*";
+            lblDentist.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtDentistName
+            // txtDentist
             // 
-            txtDentistName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDentistName.Location = new Point(450, 150);
-            txtDentistName.Margin = new Padding(50, 10, 10, 5);
-            txtDentistName.Name = "txtDentistName";
-            txtDentistName.Size = new Size(244, 29);
-            txtDentistName.TabIndex = 18;
+            txtDentist.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDentist.Location = new Point(450, 150);
+            txtDentist.Margin = new Padding(50, 10, 10, 5);
+            txtDentist.Name = "txtDentist";
+            txtDentist.Size = new Size(244, 29);
+            txtDentist.TabIndex = 18;
             // 
-            // emailContactLabel
+            // lblEmail
             // 
-            emailContactLabel.AutoSize = true;
-            emailContactLabel.BackColor = Color.Transparent;
-            emailContactLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailContactLabel.Location = new Point(19, 189);
-            emailContactLabel.Margin = new Padding(2, 5, 2, 3);
-            emailContactLabel.Name = "emailContactLabel";
-            emailContactLabel.Size = new Size(112, 21);
-            emailContactLabel.TabIndex = 19;
-            emailContactLabel.Text = "Email Contact*";
-            emailContactLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmail.AutoSize = true;
+            lblEmail.BackColor = Color.Transparent;
+            lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(19, 189);
+            lblEmail.Margin = new Padding(2, 5, 2, 3);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(112, 21);
+            lblEmail.TabIndex = 19;
+            lblEmail.Text = "Email Contact*";
+            lblEmail.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtEmail
             // 
@@ -153,18 +153,18 @@
             txtEmail.Size = new Size(379, 29);
             txtEmail.TabIndex = 20;
             // 
-            // phoneContactLabel
+            // lblPhone
             // 
-            phoneContactLabel.AutoSize = true;
-            phoneContactLabel.BackColor = Color.Transparent;
-            phoneContactLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            phoneContactLabel.Location = new Point(450, 189);
-            phoneContactLabel.Margin = new Padding(2, 5, 2, 10);
-            phoneContactLabel.Name = "phoneContactLabel";
-            phoneContactLabel.Size = new Size(111, 21);
-            phoneContactLabel.TabIndex = 21;
-            phoneContactLabel.Text = "Phone Contact";
-            phoneContactLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblPhone.AutoSize = true;
+            lblPhone.BackColor = Color.Transparent;
+            lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.Location = new Point(450, 189);
+            lblPhone.Margin = new Padding(2, 5, 2, 10);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(111, 21);
+            lblPhone.TabIndex = 21;
+            lblPhone.Text = "Phone Contact";
+            lblPhone.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtPhone
             // 
@@ -175,18 +175,18 @@
             txtPhone.Size = new Size(244, 29);
             txtPhone.TabIndex = 22;
             // 
-            // descriptionLabel
+            // lblDescription
             // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.BackColor = Color.Transparent;
-            descriptionLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            descriptionLabel.Location = new Point(19, 255);
-            descriptionLabel.Margin = new Padding(2, 5, 2, 3);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(96, 21);
-            descriptionLabel.TabIndex = 23;
-            descriptionLabel.Text = "Description*";
-            descriptionLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblDescription.AutoSize = true;
+            lblDescription.BackColor = Color.Transparent;
+            lblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescription.Location = new Point(19, 255);
+            lblDescription.Margin = new Padding(2, 5, 2, 3);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(96, 21);
+            lblDescription.TabIndex = 23;
+            lblDescription.Text = "Description*";
+            lblDescription.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtDescription
             // 
@@ -222,27 +222,27 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += BtnCancel_Click;
             // 
-            // lblTVId
+            // lblTVID
             // 
-            lblTVId.AutoSize = true;
-            lblTVId.BackColor = Color.Transparent;
-            lblTVId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTVId.Location = new Point(450, 255);
-            lblTVId.Margin = new Padding(2, 10, 2, 3);
-            lblTVId.Name = "lblTVId";
-            lblTVId.Size = new Size(113, 21);
-            lblTVId.TabIndex = 28;
-            lblTVId.Text = "TeamViewer ID";
-            lblTVId.TextAlign = ContentAlignment.MiddleCenter;
+            lblTVID.AutoSize = true;
+            lblTVID.BackColor = Color.Transparent;
+            lblTVID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTVID.Location = new Point(450, 255);
+            lblTVID.Margin = new Padding(2, 10, 2, 3);
+            lblTVID.Name = "lblTVID";
+            lblTVID.Size = new Size(113, 21);
+            lblTVID.TabIndex = 28;
+            lblTVID.Text = "TeamViewer ID";
+            lblTVID.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtTVId
+            // txtTVID
             // 
-            txtTVId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTVId.Location = new Point(450, 282);
-            txtTVId.Margin = new Padding(2, 3, 10, 5);
-            txtTVId.Name = "txtTVId";
-            txtTVId.Size = new Size(244, 29);
-            txtTVId.TabIndex = 29;
+            txtTVID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTVID.Location = new Point(450, 282);
+            txtTVID.Margin = new Padding(2, 3, 10, 5);
+            txtTVID.Name = "txtTVID";
+            txtTVID.Size = new Size(244, 29);
+            txtTVID.TabIndex = 29;
             // 
             // lblTVPassword
             // 
@@ -274,22 +274,22 @@
             ClientSize = new Size(713, 487);
             Controls.Add(txtTVPassword);
             Controls.Add(lblTVPassword);
-            Controls.Add(txtTVId);
-            Controls.Add(lblTVId);
+            Controls.Add(txtTVID);
+            Controls.Add(lblTVID);
             Controls.Add(btnCancel);
             Controls.Add(btnSubmit);
             Controls.Add(txtDescription);
-            Controls.Add(descriptionLabel);
+            Controls.Add(lblDescription);
             Controls.Add(txtPhone);
-            Controls.Add(phoneContactLabel);
+            Controls.Add(lblPhone);
             Controls.Add(txtEmail);
-            Controls.Add(emailContactLabel);
-            Controls.Add(txtDentistName);
-            Controls.Add(dentistNamelabel);
-            Controls.Add(clinicNamelabel);
-            Controls.Add(txtClinicName);
-            Controls.Add(instructionsLabel);
-            Controls.Add(supportLabel);
+            Controls.Add(lblEmail);
+            Controls.Add(txtDentist);
+            Controls.Add(lblDentist);
+            Controls.Add(lblClinic);
+            Controls.Add(txtClinic);
+            Controls.Add(lblInstructions);
+            Controls.Add(lblSupport);
             Controls.Add(Logo);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2, 3, 2, 3);
@@ -305,22 +305,22 @@
         #endregion
 
         private PictureBox Logo;
-        private Label supportLabel;
-        private Label instructionsLabel;
-        private TextBox txtClinicName;
-        private Label clinicNamelabel;
-        private Label dentistNamelabel;
-        private TextBox txtDentistName;
-        private Label emailContactLabel;
+        private Label lblSupport;
+        private Label lblInstructions;
+        private TextBox txtClinic;
+        private Label lblClinic;
+        private Label lblDentist;
+        private TextBox txtDentist;
+        private Label lblEmail;
         private TextBox txtEmail;
-        private Label phoneContactLabel;
+        private Label lblPhone;
         private TextBox txtPhone;
-        private Label descriptionLabel;
+        private Label lblDescription;
         private TextBox txtDescription;
         private Button btnSubmit;
         private Button btnCancel;
-        private Label lblTVId;
-        private TextBox txtTVId;
+        private Label lblTVID;
+        private TextBox txtTVID;
         private Label lblTVPassword;
         private TextBox txtTVPassword;
     }

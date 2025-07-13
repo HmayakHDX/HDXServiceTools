@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            supportLabel = new Label();
+            lblSupport = new Label();
             Logo = new PictureBox();
-            welcomeLabel = new Label();
-            installButton = new Button();
-            troubleshootButton = new Button();
-            qualityAssuranceButton = new Button();
-            troubleshootWorkstationButton = new Button();
+            lblWelcome = new Label();
+            btnInstall = new Button();
+            btnTroubleshoot = new Button();
+            btnQA = new Button();
             btnHelp = new Button();
             ((System.ComponentModel.ISupportInitialize)Logo).BeginInit();
             SuspendLayout();
             // 
-            // supportLabel
+            // lblSupport
             // 
-            supportLabel.Anchor = AnchorStyles.Bottom;
-            supportLabel.AutoSize = true;
-            supportLabel.BackColor = Color.Transparent;
-            supportLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            supportLabel.Location = new Point(189, 448);
-            supportLabel.Margin = new Padding(180, 10, 180, 0);
-            supportLabel.Name = "supportLabel";
-            supportLabel.Size = new Size(335, 30);
-            supportLabel.TabIndex = 6;
-            supportLabel.Text = "For any questions or concerns, please contact HDX support:\n888–850–8810 (Ext. 3) | support@hdxwillna.com";
-            supportLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblSupport.Anchor = AnchorStyles.Bottom;
+            lblSupport.AutoSize = true;
+            lblSupport.BackColor = Color.Transparent;
+            lblSupport.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSupport.Location = new Point(189, 448);
+            lblSupport.Margin = new Padding(180, 10, 180, 0);
+            lblSupport.Name = "lblSupport";
+            lblSupport.Size = new Size(335, 30);
+            lblSupport.TabIndex = 6;
+            lblSupport.Text = "For any questions or concerns, please contact HDX support:\n888–850–8810 (Ext. 3) | support@hdxwillna.com";
+            lblSupport.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Logo
             // 
@@ -63,65 +62,57 @@
             Logo.TabIndex = 7;
             Logo.TabStop = false;
             // 
-            // welcomeLabel
+            // lblWelcome
             // 
-            welcomeLabel.AutoSize = true;
-            welcomeLabel.BackColor = Color.Transparent;
-            welcomeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.Location = new Point(173, 99);
-            welcomeLabel.Margin = new Padding(2, 10, 2, 10);
-            welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(358, 42);
-            welcomeLabel.TabIndex = 8;
-            welcomeLabel.Text = "Welcome to the HDX WILL Self Service Application\nPlease select one of the options below:";
-            welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lblWelcome.AutoSize = true;
+            lblWelcome.BackColor = Color.Transparent;
+            lblWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblWelcome.Location = new Point(173, 99);
+            lblWelcome.Margin = new Padding(2, 10, 2, 10);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(358, 42);
+            lblWelcome.TabIndex = 8;
+            lblWelcome.Text = "Welcome to the HDX WILL Self Service Application\nPlease select one of the options below:";
+            lblWelcome.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // installButton
+            // btnInstall
             // 
-            installButton.AutoSize = true;
-            installButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            installButton.Location = new Point(276, 249);
-            installButton.Margin = new Padding(9, 3, 2, 20);
-            installButton.Name = "installButton";
-            installButton.Size = new Size(162, 55);
-            installButton.TabIndex = 3;
-            installButton.Text = "Software Installation\n";
-            installButton.UseVisualStyleBackColor = true;
-            installButton.Click += InstallButton_Click;
+            btnInstall.AutoSize = true;
+            btnInstall.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnInstall.Location = new Point(276, 249);
+            btnInstall.Margin = new Padding(9, 3, 2, 20);
+            btnInstall.Name = "btnInstall";
+            btnInstall.Size = new Size(162, 55);
+            btnInstall.TabIndex = 3;
+            btnInstall.Text = "Software Installation\n";
+            btnInstall.UseVisualStyleBackColor = true;
+            btnInstall.Click += BtnInstall_Click;
             // 
-            // troubleshootButton
+            // btnTroubleshoot
             // 
-            troubleshootButton.AutoSize = true;
-            troubleshootButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            troubleshootButton.Location = new Point(276, 171);
-            troubleshootButton.Margin = new Padding(266, 20, 266, 20);
-            troubleshootButton.Name = "troubleshootButton";
-            troubleshootButton.Size = new Size(162, 55);
-            troubleshootButton.TabIndex = 2;
-            troubleshootButton.Text = "Troubleshoot\n";
-            troubleshootButton.UseVisualStyleBackColor = true;
-            troubleshootButton.Click += TroubleshootButton_Click;
+            btnTroubleshoot.AutoSize = true;
+            btnTroubleshoot.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTroubleshoot.Location = new Point(276, 171);
+            btnTroubleshoot.Margin = new Padding(266, 20, 266, 20);
+            btnTroubleshoot.Name = "btnTroubleshoot";
+            btnTroubleshoot.Size = new Size(162, 55);
+            btnTroubleshoot.TabIndex = 2;
+            btnTroubleshoot.Text = "Troubleshoot\n";
+            btnTroubleshoot.UseVisualStyleBackColor = true;
+            btnTroubleshoot.Click += BtnTroubleshoot_Click;
             // 
-            // qualityAssuranceButton
+            // btnQA
             // 
-            qualityAssuranceButton.AutoSize = true;
-            qualityAssuranceButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            qualityAssuranceButton.Location = new Point(276, 327);
-            qualityAssuranceButton.Margin = new Padding(2, 3, 2, 30);
-            qualityAssuranceButton.Name = "qualityAssuranceButton";
-            qualityAssuranceButton.Size = new Size(162, 55);
-            qualityAssuranceButton.TabIndex = 4;
-            qualityAssuranceButton.Text = "QA/QC";
-            qualityAssuranceButton.UseVisualStyleBackColor = true;
-            qualityAssuranceButton.Click += QualityAssuranceButton_Click;
-            // 
-            // troubleshootWorkstationButton
-            // 
-            troubleshootWorkstationButton.Location = new Point(44, 409);
-            troubleshootWorkstationButton.Name = "troubleshootWorkstationButton";
-            troubleshootWorkstationButton.Size = new Size(75, 23);
-            troubleshootWorkstationButton.TabIndex = 30;
-            troubleshootWorkstationButton.Visible = false;
+            btnQA.AutoSize = true;
+            btnQA.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnQA.Location = new Point(276, 327);
+            btnQA.Margin = new Padding(2, 3, 2, 30);
+            btnQA.Name = "btnQA";
+            btnQA.Size = new Size(162, 55);
+            btnQA.TabIndex = 4;
+            btnQA.Text = "QA/QC";
+            btnQA.UseVisualStyleBackColor = true;
+            btnQA.Click += BtnQA_Click;
             // 
             // btnHelp
             // 
@@ -143,13 +134,12 @@
             BackColor = Color.LightGray;
             ClientSize = new Size(713, 487);
             Controls.Add(btnHelp);
-            Controls.Add(troubleshootWorkstationButton);
-            Controls.Add(qualityAssuranceButton);
-            Controls.Add(troubleshootButton);
-            Controls.Add(installButton);
-            Controls.Add(welcomeLabel);
+            Controls.Add(btnQA);
+            Controls.Add(btnTroubleshoot);
+            Controls.Add(btnInstall);
+            Controls.Add(lblWelcome);
             Controls.Add(Logo);
-            Controls.Add(supportLabel);
+            Controls.Add(lblSupport);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2, 3, 2, 3);
             MaximizeBox = false;
@@ -163,13 +153,12 @@
 
         #endregion
 
-        private Label supportLabel;
+        private Label lblSupport;
         private PictureBox Logo;
-        private Label welcomeLabel;
-        private Button installButton;
-        private Button troubleshootButton;
-        private Button qualityAssuranceButton;
-        private Button troubleshootWorkstationButton;
+        private Label lblWelcome;
+        private Button btnInstall;
+        private Button btnTroubleshoot;
+        private Button btnQA;
         private Button btnHelp;
     }
 }

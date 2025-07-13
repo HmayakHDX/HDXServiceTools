@@ -63,6 +63,16 @@ namespace HDX_ServiceTools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] installOptions {
+            get {
+                object obj = ResourceManager.GetObject("installOptions", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] knownErrors {
             get {
                 object obj = ResourceManager.GetObject("knownErrors", resourceCulture);

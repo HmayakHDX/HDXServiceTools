@@ -1,5 +1,4 @@
 ﻿using HDX_ServiceTools.Models;
-using HDX_ServiceTools.Properties;
 using System.Text;
 using System.Text.Json;
 
@@ -11,23 +10,22 @@ namespace HDX_ServiceTools.Helpers
         /// Loads known errors from the embedded JSON resource.
         /// Throws if the file is missing or can't be deserialized.
         /// </summary>
-        public static List<ErrorInfo> LoadFromJSON()
+        public static List<T> LoadFromJSON<T>(byte[] file)
         {
             try
             {
-                byte[] jsonBytes = Resources.knownErrors;
-                string jsonContent = Encoding.UTF8.GetString(jsonBytes);
+                string jsonContent = Encoding.UTF8.GetString(file);
 
-                List<ErrorInfo>? knownErrors = JsonSerializer.Deserialize<List<ErrorInfo>>(jsonContent);
+                List<T>? result = JsonSerializer.Deserialize<List<T>>(jsonContent);
 
-                if (knownErrors == null || knownErrors.Count == 0)
+                if (result == null || result.Count == 0)
                     throw new InvalidOperationException("The embedded JSON was empty or could not be deserialized.");
 
-                return knownErrors;
+                return result;
             }
             catch (Exception ex)
             {
-                throw new Exception("Failed to load known errors from embedded resource.", ex);
+                throw new Exception($"Failed to load data from embedded resource as {typeof(T).Name}.", ex);
             }
         }
 
@@ -68,6 +66,12 @@ namespace HDX_ServiceTools.Helpers
         {
             return errors.FirstOrDefault(e =>
                 e.Code.Equals(code, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public static InstallationInfo? FindByOption(List<InstallationInfo> options, string option)
+        {
+            return options.FirstOrDefault(o =>
+                o.Option.Equals(option, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

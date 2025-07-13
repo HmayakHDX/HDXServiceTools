@@ -19,12 +19,12 @@ namespace HDX_ServiceTools.Forms
         {
             btnSubmit.Enabled = false;
 
-            string clinic = txtClinicName.Text.Trim();
-            string dentist = txtDentistName.Text.Trim();
+            string clinic = txtClinic.Text.Trim();
+            string dentist = txtDentist.Text.Trim();
             string email = txtEmail.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string issue = txtDescription.Text.Trim();
-            string tvId = txtTVId.Text.Trim();
+            string tvId = txtTVID.Text.Trim();
             string tvPassword = txtTVPassword.Text.Trim();
             string teamViewerInfo;
 

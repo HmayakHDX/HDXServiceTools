@@ -14,7 +14,7 @@
         public static void PromptToContactSupport()
         {
             MessageBox.Show(
-                "Application was unable to resolve the issue.\n\nPlease contact HDX support.",
+                "Please contact HDX support.",
                 "Contact HDX support",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation

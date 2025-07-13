@@ -4,7 +4,7 @@ namespace HDX_ServiceTools.InstallHandlers
 {
     internal class WMODHandler : IInstallHandler
     {
-        public async Task HandleAsync(Action<string> updateStatus, IProgress<int> progress, CancellationToken token)
+        public async Task<bool> HandleAsync(Action<string> updateStatus, IProgress<int> progress, CancellationToken token)
         {
             // START DEMO
             // Simulate installation, extraction, and installation process with empty await statements and progress bar updates/resets
@@ -45,6 +45,7 @@ namespace HDX_ServiceTools.InstallHandlers
                 }
 
                 Logger.LogAndUpdate("Installation has been completed.", updateStatus);
+                return true;
             }
             catch (OperationCanceledException)
             {
@@ -52,10 +53,12 @@ namespace HDX_ServiceTools.InstallHandlers
                 Logger.LogAndUpdate("Installation cancelled by user.", updateStatus);
                 Logger.LogAndUpdate("Cleaning up temporary files...", updateStatus);
                 await Task.Delay(5000, CancellationToken.None);
+                return false;
             }
 
             // END DEMO
 
+            // TODO: return true if installation completed successfully, false if cancelled or failed
             /*string url = "https://www.dropbox.com/scl/fi/dsksvdpx6z3fhxqvgtzc6/Will-Master_OnDemand_InstallPackage.zip?rlkey=u2o2h3h9n96134rr5kr83trkm&st=o39qicgt&dl=1";
             
             string downloadPath = Path.Combine(Path.GetTempPath(), "hdx_temp_install.zip");
