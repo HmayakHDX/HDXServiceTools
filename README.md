@@ -88,10 +88,12 @@ HDX_ServiceTools/
 │
 ├── Models/                 # Data models
 │   └── ErrorInfo.cs
+│   └── InstalltionInfo.cs
 │
 ├── Resources/              # Embedded assets
 │   └── Logo.png
 │   └── knownErrors.json    # JSON-configured error mapping
+│	└── installOptions.json    # JSON-configured installation mapping
 ```
 
 ## Roadmap
